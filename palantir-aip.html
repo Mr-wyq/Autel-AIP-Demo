@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palantir AIP Interface Study Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">AIP</div>
+          <div>
+            <div class="brand-title">AIP Console</div>
+            <div class="brand-subtitle">Learning Prototype</div>
+          </div>
+        </div>
+
+        <div class="workspace-switch">
+          <span class="dot"></span>
+          <div>
+            <strong>Foundry Enrollment</strong>
+            <small>Enterprise AI Workspace</small>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="AIP modules">
+          <button class="nav-item is-active" data-view="flow">
+            <span>总流程图</span>
+            <small>User Flow</small>
+          </button>
+          <button class="nav-item" data-view="home">
+            <span>Home</span>
+            <small>Overview</small>
+          </button>
+          <button class="nav-item" data-view="agent">
+            <span>Chatbot Studio</span>
+            <small>formerly Agent</small>
+          </button>
+          <button class="nav-item" data-view="ontology">
+            <span>Ontology</span>
+            <small>Business model</small>
+          </button>
+          <button class="nav-item" data-view="logic">
+            <span>AIP Logic</span>
+            <small>Logic builder</small>
+          </button>
+          <button class="nav-item" data-view="workflow">
+            <span>Workflow</span>
+            <small>Workflow graph</small>
+          </button>
+          <button class="nav-item" data-view="automate">
+            <span>Automate</span>
+            <small>Triggers</small>
+          </button>
+          <button class="nav-item" data-view="workshop">
+            <span>Workshop App</span>
+            <small>User app</small>
+          </button>
+          <button class="nav-item" data-view="analyst">
+            <span>AIP Analyst</span>
+            <small>Analysis</small>
+          </button>
+          <button class="nav-item" data-view="assist">
+            <span>AIP Assist</span>
+            <small>Platform helper</small>
+          </button>
+          <button class="nav-item" data-view="aifde">
+            <span>AI FDE</span>
+            <small>AI engineer</small>
+          </button>
+          <button class="nav-item" data-view="threads">
+            <span>AIP Threads</span>
+            <small>Productivity</small>
+          </button>
+          <button class="nav-item" data-view="evals">
+            <span>Evals & Ops</span>
+            <small>Evaluation</small>
+          </button>
+          <button class="nav-item" data-view="data">
+            <span>Data & Docs</span>
+            <small>Data pipeline</small>
+          </button>
+          <button class="nav-item" data-view="models">
+            <span>Model Catalog</span>
+            <small>Models</small>
+          </button>
+          <button class="nav-item" data-view="devtools">
+            <span>Dev Tools</span>
+            <small>APIs / SDKs</small>
+          </button>
+          <button class="nav-item" data-view="marketplace">
+            <span>Marketplace</span>
+            <small>Distribution</small>
+          </button>
+          <button class="nav-item" data-view="featuremap">
+            <span>Feature Map</span>
+            <small>Checklist</small>
+          </button>
+          <button class="nav-item" data-view="admin">
+            <span>Admin</span>
+            <small>Governance</small>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="tiny-label">Prototype note</div>
+          <p>Reconstructed from public docs and tutorials. Not an official Palantir screenshot.</p>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="searchbox">
+            <span>Search</span>
+            <input value="Palantir AIP 总流程图" aria-label="Search" />
+            <kbd>⌘K</kbd>
+          </div>
+          <div class="topbar-actions">
+            <span class="pill">Branch: main</span>
+            <span class="pill">Model: GPT-4.1</span>
+            <span class="pill good">Audit on</span>
+          </div>
+        </header>
+
+        <section class="hero-row">
+          <div>
+            <div class="eyebrow">Palantir AIP product map</div>
+            <h1 id="viewTitle">AIP Home</h1>
+            <p id="viewSubtitle">
+              Enterprise AI platform across data, ontology, agents, applications, and governance.
+            </p>
+          </div>
+          <div class="status-card">
+            <span>Source scope</span>
+            <strong>Docs + tutorial reconstruction</strong>
+            <small>The center area mimics product surfaces; the right panel explains them in Chinese.</small>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <section class="canvas" id="canvas" aria-live="polite"></section>
+          <aside class="inspector">
+            <div class="inspector-head">
+              <span class="tiny-label">中文功能说明</span>
+              <button id="pinMode" class="text-button" type="button">回到总览</button>
+            </div>
+            <h2 id="inspectorTitle">AIP 是什么</h2>
+            <p id="inspectorBody">
+              右侧区域只放中文解释；中间区域尽量保留英文产品术语和界面形态，用来模拟 Palantir AIP 原系统。
+            </p>
+            <div id="inspectorBullets" class="bullet-list"></div>
+            <div class="explain-box">
+              <strong>怎么看这个原型</strong>
+              <p>中间是“仿原系统界面”，右侧是“中文学习说明”。点击左侧模块、顶部 tabs 或界面里的功能项，说明会跟随变化。</p>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
